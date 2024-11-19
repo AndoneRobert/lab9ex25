@@ -10,4 +10,5 @@ package com.mycompany.project;
  */
 public class Tren {
     int pasageri;
+    int putere;
 }
