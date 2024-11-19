@@ -11,10 +11,7 @@ package com.mycompany.project;
 public class Project {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Test 123");
-        System.out.println("cosmin are pere");
-        System.out.println("Test doi zece proba 123");
+        Tren tren = new Tren ("")
     }
 } //ana are mere
 //haiinvancaten
