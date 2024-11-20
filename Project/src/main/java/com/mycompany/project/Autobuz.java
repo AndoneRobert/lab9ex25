@@ -21,7 +21,7 @@ public class Autobuz extends Vehicul {
     }
     
     public Autobuz(String marca, int nrLocuri, boolean esteEtajat, Color culoare, byte linie, 
-            int vitezaMaxima, int anFabricatie, String combustibil){
+        int vitezaMaxima, int anFabricatie, String combustibil){
         super(vitezaMaxima, anFabricatie, combustibil);
         this.marca = marca;
         this.nrLocuri = nrLocuri;
