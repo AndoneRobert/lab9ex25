@@ -6,7 +6,7 @@ import java.awt.Color;
  */
 public class Autobuz extends Vehicul {
     private String marca;
-    private int nrLocuri;
+    private byte nrLocuri;
     private boolean esteEtajat;
     private Color culoare;
     private byte linie;
@@ -20,7 +20,7 @@ public class Autobuz extends Vehicul {
         this.linie = 0;
     }
     
-    public Autobuz(String marca, int nrLocuri, boolean esteEtajat, Color culoare, byte linie, 
+    public Autobuz(String marca, byte nrLocuri, boolean esteEtajat, Color culoare, byte linie, 
         int vitezaMaxima, int anFabricatie, String combustibil){
         super(vitezaMaxima, anFabricatie, combustibil);
         this.marca = marca;
@@ -49,11 +49,11 @@ public class Autobuz extends Vehicul {
     }
     
     // Getter si setter pentru `nrLocuri`
-    public int getNrLocuri() {
+    public byte getNrLocuri() {
         return this.nrLocuri;
     }
 
-    public void setNrLocuri(int nrLocuri) {
+    public void setNrLocuri(byte nrLocuri) {
         this.nrLocuri = nrLocuri;
     }
 

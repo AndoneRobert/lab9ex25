@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.project;
 
 /**
@@ -9,47 +5,58 @@ package com.mycompany.project;
  * @author robii
  */
 public class Tren extends Vehicul {
-    //viteza maxima, combustie, an fabricatie
-    private String tipTren;
+    
+    private String marca;
     private String model;
     private int nrVagoane;
+    private String tipTren;
+    private String tara;
+    private String facilitati;
+    private double lungime;
     
-    //constructor fara argumente
     public Tren(){
         super();
-        this.tipTren = "NULL";
+        this.marca = "NULL";
         this.model = "NULL";
         this.nrVagoane = 0;
+        this.tipTren="NULL";
+        this.tara="NULL";
+        this.facilitati="NULL";
+        this.lungime = 0;
     }
     
-    //constructor cu toate argumentele
-    public Tren(int vitezaMaxima, int anFabricatie, String combustibil, String tipTren, String model, int nrVagoane){
+    public Tren(int vitezaMaxima, int anFabricatie, String combustibil, String marca, String model, int nrVagoane, String tipTren, String tara, String facilitati, double lungime){
         super(vitezaMaxima, anFabricatie, combustibil);
-        this.tipTren = tipTren;
+        this.marca = marca;
         this.model = model;
         this.nrVagoane = nrVagoane;
+        this.tipTren=tipTren;
+        this.tara=tara;
+        this.facilitati=facilitati;
+        this.lungime=lungime;
     }
     
-    //constructor de copiere
     public Tren(Tren tren){
         super(tren);
-        this.tipTren = tren.tipTren;
+        this.marca = tren.marca;
         this.model = tren.model;
         this.nrVagoane = tren.nrVagoane;
+        this.tipTren=tren.tipTren;
+        this.tara=tren.tara;
+        this.facilitati=tren.facilitati;
+        this.lungime=tren.lungime;
     }
     
-    public String getTipTren(){
-        return tipTren;
+    public String getMarca(){
+        return marca;
     }
-    
-    public void setTipTren(String tipTren){
-        this.tipTren =  tipTren;
+    public void setMarca(String marca){
+        this.marca =  marca;
     }
     
     public String getModel(){
         return model;
     }
-    
     public void setModel(String model){
         this.model = model;
     }
@@ -57,13 +64,40 @@ public class Tren extends Vehicul {
     public int getNrVagoane(){
         return nrVagoane;
     }
-    
     public void setNrVagoane(int nrVagoane){
         this.nrVagoane = nrVagoane;
     }
     
+    public String getTipTren(){
+        return tipTren;
+    }
+    public void setTipTren(String tipTren){
+        this.tipTren=tipTren;
+    }
+    
+    public String getTara(){
+        return tara;
+    }
+    public void setTara(String tara){
+        this.tara=tara;
+    }
+    
+    public String getFacilitati(){
+        return facilitati;
+    }
+    public void setFacilitati(String facilitati){
+        this.facilitati=facilitati;
+    }
+    
+    public double getLungime(){
+        return lungime;
+    }
+    public void setLungime(double lungime){
+        this.lungime=lungime;
+    }
+    
     @Override
     public String toString(){
-        return super.toString() + ", tren "+tipTren+" model de tip "+model+ "are"+nrVagoane+" vagoane";
+        return super.toString() +". Modelul "+model+" de la "+marca+" fabricat in "+tara+" este un tren "+tipTren+" are lungimea de "+lungime+" metri, are "+nrVagoane+" vagoane si este dotat cu "+facilitati+".";
     }
 }
